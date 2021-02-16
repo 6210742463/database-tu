@@ -1,0 +1,14 @@
+
+{% extends 'CRUD/base.html' %}
+{% block title %}เพิ่มสมาชิก{% endblock %}
+{% block body %}
+{% load crispy_forms_tags %}
+<div class="header"> เพิ่มสมาชิก </div>  
+            <div class="info">
+                <form method="POST">
+                    {% csrf_token %}
+                {{ form | crispy }}
+                <button type="submit" class="btn btn-primary">บันทึก</button>
+            </form>
+</div>
+{% endblock %}

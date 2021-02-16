@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital@1&display=swap" rel="stylesheet">
+    <title>Login</title>
+  </head>
+  <body> 
+    <div class="main">
+
+      <div class="container b-container" id="b-container">
+        <form class="form" id="b-form" method="POST">
+            {% csrf_token %}
+          <h2 class="form_title title">เข้าสู่ระบบ</h2>
+          <input class="form__input" type="text" placeholder="Username" id="username" name="username">
+          <input class="form__input" type="password" placeholder="Password" id="password" name="password">
+          <br>
+          <button class="button button5">SIGN IN</button>
+        </form>
+      </div>
+
+      <div class="switch" id="switch-cnt">
+        <div class="switch__circle"></div>
+        <div class="switch__circle switch__circle--t"></div>
+
+        <div class="switch__container" id="switch-c1">
+          <h2 class="switch__title title">Database</h2>
+          <p class="switch__description description">
+            สำนักงานธรรมศาสตร์สัมพันธ์
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="{% static 'main.js' %}"></script>
+  </body>
+</html>
+

@@ -1,0 +1,14 @@
+
+{% extends 'CRUD/base.html' %}
+{% block title %}แก้ไขข้อมูลสมาชิก{% endblock %}
+{% block body %}
+{% load crispy_forms_tags %}
+<div class="header"> แก้ไขข้อมูลสมาชิก </div>  
+            <div class="info">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <button type="submit" class="btn btn-primary">บันทึก</button>
+                </form>
+</div>
+{% endblock %}

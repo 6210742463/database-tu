@@ -1,0 +1,16 @@
+
+{% extends 'CRUD/base.html' %}
+{% block title %}เพิ่มจังหวัด{% endblock %}
+{% block body %}
+
+<div class="header"> เพิ่มจังหวัด </div>  
+            <div class="info">
+              <form method="POST">
+                {% csrf_token %}
+               <label>จังหวัด</label> 
+              <input type="text" name="name" id="name" class="form-control">
+              <br>
+              <button type="submit" class="btn btn-primary">บันทึก</button>
+            </form>
+</div>
+{% endblock %}
